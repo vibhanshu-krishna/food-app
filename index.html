@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>FeastFlow | Premium Food Delivery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="loader"><div class="spinner"></div></div>
+
+    <header id="navbar">
+        <div class="logo"><i class="fas fa-utensils"></i> Feast<span>Flow</span></div>
+        <nav>
+            <ul id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="nav-right">
+            <div class="nav-icons-row">
+                <div class="icon-wrapper"><i class="fas fa-heart"></i><span id="wishlistBadge" class="badge">0</span></div>
+                <div class="icon-wrapper"><i class="fas fa-shopping-cart"></i><span id="cartBadge" class="badge">0</span></div>
+                <div class="icon-wrapper user-icon"><i class="fas fa-user"></i></div>
+            </div>
+            <i class="fas fa-bars" id="hamburger" onclick="toggleMenu()"></i>
+        </div>
+    </header>
+
+    <section id="home" class="hero fade-up">
+        <div class="hero-content">
+            <span class="offer-tag">50% Off on your first order</span>
+            <h1>Chase The Flavor <br>With <span>FeastFlow</span></h1>
+            <p>Freshly made meals delivered to your doorstep in 30 minutes. Experience the joy of restaurant-quality flavors at home.</p>
+            <div class="hero-btns">
+                <a href="#menu" class="btn-primary">Order Now</a>
+                <a href="#about" class="btn-outline">Read More</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat"><b>12k+</b><span>Happy Users</span></div>
+                <div class="stat"><b>50+</b><span>Top Chefs</span></div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="main-img-container">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600" alt="Food" class="hero-img">
+                <div class="floating-card badge-1"><i class="fas fa-star"></i> 4.9 Rating</div>
+                <div class="floating-card badge-2"><i class="fas fa-clock"></i> 25 Min Delivery</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-section fade-up">
+        <h2 class="section-title">Why Choose Us?</h2>
+        <div class="why-grid">
+            <div class="why-box"><i class="fas fa-truck"></i><h3>Fast Delivery</h3><p>Hot food in 30 mins.</p></div>
+            <div class="why-box"><i class="fas fa-leaf"></i><h3>Fresh Food</h3><p>100% Organic items.</p></div>
+            <div class="why-box"><i class="fas fa-headset"></i><h3>24/7 Support</h3><p>Ready to help you.</p></div>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-section fade-up">
+        <h2 class="section-title">Our Special Menu</h2>
+        <div class="filter-tabs">
+            <button class="filter-btn active" data-cat="all">All</button>
+            <button class="filter-btn" data-cat="pizza">Pizza</button>
+            <button class="filter-btn" data-cat="mains">Mains</button>
+            <button class="filter-btn" data-cat="beverages">Beverages</button>
+            <button class="filter-btn" data-cat="desserts">Desserts</button>
+        </div>
+        <div id="menuGrid" class="grid-container"></div>
+    </section>
+
+    <section id="about" class="about-section fade-up">
+        <div class="about-container">
+            <div class="about-image">
+                <div class="about-img-stack">
+                    <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=500" class="img-large" alt="Chef">
+                    <div class="experience-tag">
+                        <h3>10+</h3>
+                        <p>Years of <br> Experience</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-text">
+                <span class="badge-text">ABOUT OUR STORY</span>
+                <h2>We Provide Healthy Food <br> For Your <span>Healthy Life</span></h2>
+                <p>FeastFlow started with a simple idea: good food should be accessible to everyone. We work with local farmers to source the freshest organic ingredients.</p>
+                <div class="features-list">
+                    <div class="feat"><i class="fas fa-check-circle"></i> Pure Organic Food</div>
+                    <div class="feat"><i class="fas fa-check-circle"></i> Professional Master Chefs</div>
+                    <div class="feat"><i class="fas fa-check-circle"></i> Fast & Free Home Delivery</div>
+                </div>
+                <button class="btn-primary">Discover More</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section fade-up">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Get In Touch</h2>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Foodie Street, India</p>
+                <p><i class="fas fa-phone"></i> +91 9876543210</p>
+            </div>
+            <form id="contactForm" class="contact-form">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message" rows="4" required></textarea>
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="footer-box about-box">
+                <div class="logo">Feast<span>Flow</span></div>
+                <p>We deliver the best flavors in town right to your doorstep. Quality and taste you can trust.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-box links-box">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Our Menu</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-box info-box">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Free Delivery</a></li>
+                    <li><a href="#">Organic Food</a></li>
+                    <li><a href="#">Chef's Special</a></li>
+                    <li><a href="#">Party Orders</a></li>
+                </ul>
+            </div>
+            <div class="footer-box contact-box">
+                <h4>Subscribe</h4>
+                <p>Get latest offers & updates.</p>
+                <div class="subscribe-form">
+                    <input type="email" placeholder="Email">
+                    <button><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 FeastFlow. Built with <i class="fas fa-heart" style="color:#ff4757;"></i> for Food Lovers.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
